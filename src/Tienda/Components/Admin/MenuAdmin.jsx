@@ -40,7 +40,7 @@ export const MenuAdmin = () => {
         </Navbar>     
         <Navbar bg="light">
           <Container>
-            <Navbar.Brand href="#">Ordenes</Navbar.Brand>
+            <Navbar.Brand href="/admin/PedidosView">Pedidos</Navbar.Brand>
           </Container>
         </Navbar>        
         <Navbar bg="light" style={{borderTop:"1px solid #808B96"}}>

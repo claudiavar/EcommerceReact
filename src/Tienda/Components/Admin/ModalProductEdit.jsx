@@ -1,71 +1,27 @@
-import { Col, Row, Form } from "react-bootstrap";
-import { agregarProd } from "../../helpers/ProductsApi";
-import { MenuAdmin } from "../Admin/MenuAdmin";
+import React from "react";
+import { useState } from "react";
+import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 
-export const AddProduct = () => {
-    const AddProduct = (e) => {
-        e.preventDefault();
-        const title = document.querySelector("#nombreProd").value,
-            description = document.querySelector("#desProd").value,
-            caracteristicas = document.querySelector("#caracProd").value,
-            SKU = document.querySelector("#skuProd").value,
-            price = document.querySelector("#prodPre").value,
-            descuento = document.querySelector("#prodDesc").value,
-            imagenes = document.querySelector("#proUrl").value
-        let id = Math.ceil(Math.random() * 100000);
-        if(id <= 100 ){
-            id = Math.ceil(Math.random() * 100000);
-        }
-        const data = {
-            MaxVent: 0,
-            SKU,
-            View: 0,
-            caracteristicas,
-            category_id: 1,
-            description,
-            descuento,
-            id:id,
-            images: [
-                imagenes,
-            ],
-            price,
-            subcategoria: 3,
-            title
-        }
-        agregarProd(data)
-    }
+export const ModalProductEdit = () => {
+    const [show, setShow] = useState(false);      
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
-            <Row>
-                <Col xs={2}>
-                    <MenuAdmin />
-                </Col>
+            <button className="btn text-success" onClick={handleShow}>
+                  <i className="fa fa-pencil mx-2" aria-hidden="true"></i>
+            </button>
 
-                <Col xs={10}>
-                    <Row className="border-bottom border-success align-items-center shadow-sm bg-white w-100 py-2">
-                        {" "}
-                        <Col lg={6}>
-                            {" "}
-                            <h4>AGREGAR PRODUCTO</h4>
-                        </Col>
-                    </Row>
-                    <Row className="container mx-auto my-5">
-                        <Col>
-                            <div className="card border-success">
-                                <div
-                                    className="card-header border-success"
-                                    style={{
-                                        backgroundImage:
-                                            "url(https://static.vecteezy.com/system/resources/previews/001/884/507/large_2x/abstract-green-water-color-background-illustration-texture-for-design-free-photo.jpg)",
-                                    }}
-                                >
-                                    <div className="">
-                                        <div className="d-flex flex-column align-items-center">
-                                            <h4>Nuevo Producto</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <Form>
+
+            <Modal show={show} onHide={handleClose}  size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Editar Producto</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <Form>
                                     <div className="card-body">
                                         <Row className="mb-3 w-100">
                                             <Col lg={2}>
@@ -182,23 +138,21 @@ export const AddProduct = () => {
                                         </Row>
                                     </div>
                                     <div className="card-footer">
-                                        <div className="btn btn-success float-end my-2 " onClick={AddProduct}>
+                                        <div className="btn btn-success float-end my-2 ">
                                             <i className="fa fa-plus" aria-hidden="true"></i>
-                                            <span className="mx-2">Agregar Producto</span>
+                                            <span className="mx-2">Actualizar Producto</span>
                                         </div>
                                         <div>
                                             <button className="btn btn-secondary float-end m-2">
                                                 <i className="fa fa-times" aria-hidden="true"></i>
-                                                <span className="mx-2">Cancelar</span>
+                                                <span className="mx-2" onClick={handleClose}>Cancelar</span>
                                             </button>
                                         </div>
                                     </div>
                                 </Form>
-                            </div>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+                </Modal.Body>                
+            </Modal>
         </>
     );
 };
+

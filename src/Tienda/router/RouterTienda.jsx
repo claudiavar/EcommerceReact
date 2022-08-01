@@ -4,6 +4,7 @@ import { AddProduct } from "../Components/Admin/AddProduct";
 import { AdminDashboard } from "../Components/Admin/AdminDashboard";
 import { CategoriasView } from "../Components/Admin/CategoriasView";
 import { ProductsView } from "../Components/Admin/ProductsView";
+import { PedidosView } from "../Components/Admin/PedidosView";
 import { Carshopping } from "../Components/CarroShopping/Carshopping";
 import { CompraExitosa } from "../Components/CarroShopping/CompraExitosa";
 import {Pagos} from "../Components/CarroShopping/Pagos";
@@ -38,6 +39,7 @@ export const RouterTienda = () => {
         <Route path="/admin/addProduct" element={<AddProduct/>}/>
         <Route path="/admin/categoriasView" element={<CategoriasView/>}/>
         <Route path="/admin/AddCategoria" element={<AddCategoria/>}/>
+        <Route path="/admin/PedidosView" element={<PedidosView/>}/>
 
       </Routes>
     <Footer/>

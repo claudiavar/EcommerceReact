@@ -125,7 +125,7 @@ export const Carshopping = () => {
                   </Link>
                 </div>
                 <div className="col-md-6">
-                  <ModalEnvio />
+                  <ModalEnvio/>
                 </div>
               </div>
             </div>

@@ -10,7 +10,7 @@ export const Home = () => {
     <Container fluid  style={{padding:"0"}}>
       <Banners/>
       <CategoriasVen/>
-      <CarrouselCategori/>
+     <CarrouselCategori/>
       <Banners3/>
       <OficialTiendas/>
     </Container>
