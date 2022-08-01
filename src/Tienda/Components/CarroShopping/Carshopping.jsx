@@ -51,7 +51,7 @@ export const Carshopping = () => {
                           alt="..."
                         />
                       </td>
-                      <td className="d-none d-lg-table-cell">
+                      <td className="d-none d-md-table-cell">
                         <Link
                           to="/product/detail"
                           className="text-start text-decoration-none"
@@ -82,7 +82,7 @@ export const Carshopping = () => {
                           >
                             <i className="fa fa-minus" aria-hidden="true"></i>
                           </button>
-                          <input
+                          <input                          
                             type="text"
                             readOnly
                             className="form-control "
@@ -156,10 +156,9 @@ export const Carshopping = () => {
               <div className="card-body">
                 <dl className="row border-bottom">
                   <dt className="col-6">Subotal:</dt>
-                  <dd className="col-6 text-end">S/.1,568</dd>
-
+                  <dd className="col-6 text-end">S/.</dd>
                   <dt className="col-6 text-success">Envío:</dt>
-                  <dd className="col-6 text-success text-end">S/.58</dd>
+                  <dd className="col-6 text-success text-end">Gratis</dd>
                   <dt className="col-6 text-success">
                     Cupón: <span className="small text-muted"></span>{" "}
                   </dt>
@@ -168,7 +167,7 @@ export const Carshopping = () => {
                 <dl className="row">
                   <dt className="col-6">Total:</dt>
                   <dd className="col-6 text-end h4">
-                    <span>S/.1,350</span>
+                    <span>S/.</span>
                   </dd>
                   <Link to="/checkout">
                     <button className="btn btn-success w-100 mt-3">
