@@ -3,7 +3,6 @@ import MUIDataTable from "mui-datatables";
 import { useEffect, useState, useContext } from "react";
 import { eliminarProduct, productApi } from "../../helpers/ProductsApi";
 import { MenuAdmin } from "./MenuAdmin";
-import {ModalProductEdit} from "./ModalProductEdit"
 
 export const PedidosView = () => { 
  
@@ -64,8 +63,7 @@ export const PedidosView = () => {
                       <div className="d-flex ">
                         <button className="btn text-success">
                         <i className="fa fa-pencil mx-2" aria-hidden="true"></i>
-                        </button>
-                        <ModalProductEdit/>
+                        </button>                        
                         <button className="btn text-success">
                           <i class="fa fa-trash" aria-hidden="true"></i>
                         </button>

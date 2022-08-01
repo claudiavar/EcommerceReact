@@ -15,7 +15,7 @@ export const MenuAdmin = () => {
         </Navbar>
         <Navbar bg="light">
           <Container>
-            <Navbar.Brand href="/admin/Dashboard" onFocus={{fontSize:"30px"}} style={{ }}>Dashboard</Navbar.Brand>
+            <Navbar.Brand active href="/admin/Dashboard">Dashboard</Navbar.Brand>
           </Container>
         </Navbar>
         <Navbar bg="light">
